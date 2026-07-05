@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 # 🔑 TELEGRAM SECURITY CONFIGURATION
 # Apni real details in quotes (" ") ke andar daalye:
-TELEGRAM_BOT_TOKEN = "@rk_library_admission_bot"
+TELEGRAM_BOT_TOKEN = "8996971871:AAFzlNUHwrsERTh8qROZumnlYjNN0WnKvQ4"
 TELEGRAM_CHAT_ID = "8162053627"
 
 if not os.path.exists('templates'):
