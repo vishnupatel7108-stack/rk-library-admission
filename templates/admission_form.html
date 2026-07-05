@@ -13,33 +13,16 @@
         .royal-header { font-family: 'Cinzel', serif; color: #b89734; text-align: center; font-size: 26px; letter-spacing: 1px; margin-bottom: 5px; }
         .sub-bar { text-align: center; color: #aaa; font-size: 13px; margin-bottom: 25px; }
         .form-label { font-weight: 600; color: #ffffff; font-size: 15px; margin-bottom: 8px; display: block; }
-        
-        /* ✨ TYPE KARNE WALE BOXES KO SAID AUR CHAMKILA BANANE KE LIYE */
-        .form-control { 
-            background-color: #222222 !important; 
-            color: #ffffff !important; 
-            border: 2px solid #ffc107 !important; /* Gold border jo door se dikhegi */
-            border-radius: 8px; 
-            padding: 12px; 
-            font-size: 16px;
-        }
-        /* Typing box ke andar ka placeholder text gray dikhega */
-        .form-control::placeholder {
-            color: #888888 !important;
-            font-size: 14px;
-        }
-        /* Jab student box par click karega toh border aur zyada chamkegi */
-        .form-control:focus { 
-            border-color: #ffffff !important; 
-            box-shadow: 0 0 12px rgba(255, 193, 7, 0.6) !important; 
-            background-color: #2a2a2a !important;
-        }
-
+        .form-control { background-color: #222222 !important; color: #ffffff !important; border: 2px solid #ffc107 !important; border-radius: 8px; padding: 12px; font-size: 16px; }
+        .form-control::placeholder { color: #888888 !important; font-size: 14px; }
+        .form-control:focus { border-color: #ffffff !important; box-shadow: 0 0 12px rgba(255, 193, 7, 0.6) !important; background-color: #2a2a2a !important; }
         .btn-gold-action { background-color: #b89734; color: #000; font-weight: bold; border: none; padding: 14px; font-size: 16px; border-radius: 6px; width: 100%; text-transform: uppercase; letter-spacing: 1px; margin-top: 15px; }
         .btn-gold-action:hover { background-color: #ffc107; box-shadow: 0 4px 15px rgba(255, 193, 7, 0.4); }
         .required-star { color: #dc3545; font-weight: bold; }
-        .photo-preview-box { width: 100%; height: 200px; background-color: #222; border: 2px dashed #ffc107; border-radius: 6px; display: flex; align-items: center; justify-content: center; margin-top: 10px; color: #aaa; overflow: hidden; }
-        .photo-preview-box img { width: 100%; height: 100%; object-fit: cover; }
+        
+        /* 📸 STUDENT SCREEN PREVIEW FIX: PHOTO AB KATEGI NAHI, SIKUD KIE POORI DIKHEGI */
+        .photo-preview-box { width: 100%; height: 250px; background-color: #222; border: 2px dashed #ffc107; border-radius: 6px; display: flex; align-items: center; justify-content: center; margin-top: 10px; color: #aaa; overflow: hidden; }
+        .photo-preview-box img { width: 100%; height: 100%; object-fit: contain !important; background-color: #1a1a1a; }
     </style>
 </head>
 <body>
@@ -62,7 +45,7 @@
             
             <div class="mb-3">
                 <label class="form-label">Mobile Number <span class="required-star">*</span></label>
-                <input type="tel" name="mobile_number" class="form-control" pattern="[0-9]{10}" placeholder="10 digit ka mobile number dalein..." required>
+                <input type="tel" name="mobile_number" class="form-control" pattern="[0-9]{10}" placeholder="10 digit ka mobile number... " required>
             </div>
             
             <div class="mb-3">
