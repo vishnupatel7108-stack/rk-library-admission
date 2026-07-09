@@ -4,8 +4,7 @@ from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
-# 🔑 TELEGRAM SECURITY CONFIGURATION
-# Apni real details in quotes (" ") ke andar daalye:
+# 🔑 TELEGRAM SECURITY CONFIGURATION (VERIFIED)
 TELEGRAM_BOT_TOKEN = "8996971871:AAFzlNUHwrsERTh8qROZumnlYjNN0WnKvQ4"
 TELEGRAM_CHAT_ID = "8162053627"
 
@@ -24,6 +23,7 @@ def submit_admission():
     phone = request.form.get('mobile_number')
     address = request.form.get('address')
     preparing = request.form.get('preparing_for')
+    fee_date = request.form.get('fee_date') # Fees ki tarikh read karne ke liye
     
     photo_file = request.files.get('student_photo')
     
@@ -35,6 +35,7 @@ def submit_admission():
         f"📞 **Mobile Number:** {phone}\n"
         f"📍 **Complete Address:** {address}\n"
         f"🎯 **Preparing For:** {preparing}\n"
+        f"💰 **Fee Promise Date:** {fee_date}\n" # Telegram par show hone ke liye
         "━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n"
         "⚡ *Dispatched via Secure Background Server*"
     )
