@@ -19,8 +19,6 @@
         .btn-gold-action { background-color: #b89734; color: #000; font-weight: bold; border: none; padding: 14px; font-size: 16px; border-radius: 6px; width: 100%; text-transform: uppercase; letter-spacing: 1px; margin-top: 15px; }
         .btn-gold-action:hover { background-color: #ffc107; box-shadow: 0 4px 15px rgba(255, 193, 7, 0.4); }
         .required-star { color: #dc3545; font-weight: bold; }
-        
-        /* 📸 STUDENT SCREEN PREVIEW FIX: PHOTO AB KATEGI NAHI, SIKUD KIE POORI DIKHEGI */
         .photo-preview-box { width: 100%; height: 250px; background-color: #222; border: 2px dashed #ffc107; border-radius: 6px; display: flex; align-items: center; justify-content: center; margin-top: 10px; color: #aaa; overflow: hidden; }
         .photo-preview-box img { width: 100%; height: 100%; object-fit: contain !important; background-color: #1a1a1a; }
     </style>
@@ -56,6 +54,11 @@
             <div class="mb-3">
                 <label class="form-label">Preparing For (Target Exam) <span class="required-star">*</span></label>
                 <input type="text" name="preparing_for" class="form-control" placeholder="Jaise: UPSC, SSC, Bank, REET, NEET..." required>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Fees Kab Doge? (Expected Date) <span class="required-star">*</span></label>
+                <input type="date" name="fee_date" class="form-control" required>
             </div>
             
             <div class="mb-4">
